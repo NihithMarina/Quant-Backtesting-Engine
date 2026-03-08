@@ -1,0 +1,20 @@
+2026-03-08 16:05:26 | INFO     | engine.engine | Loaded config from configs/engine.json
+2026-03-08 16:05:26 | INFO     | engine.engine | BacktestEngine created with config: configs/engine.json
+2026-03-08 16:05:26 | INFO     | engine.engine | ============================================================
+2026-03-08 16:05:26 | INFO     | engine.engine | ENGINE RUN START
+2026-03-08 16:05:26 | INFO     | engine.engine | ============================================================
+2026-03-08 16:05:26 | INFO     | engine.engine | Loaded 123 rows from data/ohlc_clean.csv (2025-09-08 -> 2026-03-06)
+2026-03-08 16:05:26 | INFO     | engine.regimes.logic | RegimeDetector initialised -- trend_ma=50, atr_window=14, lookback_vol=20
+2026-03-08 16:05:26 | INFO     | engine.regimes.logic | Regime distribution -- {'range': 43, 'volatile': 39, 'low_vol': 34, 'trend': 7}
+2026-03-08 16:05:26 | INFO     | engine.strategies.strategy_base | Initialized strategy TrendFollowing (logic_id=STRAT_1) with params: {'fast_ma': 20, 'slow_ma': 50}
+2026-03-08 16:05:26 | INFO     | engine.strategies.strategy_base | Initialized strategy MeanReversion (logic_id=STRAT_2) with params: {'rsi_window': 14, 'rsi_buy': 30, 'rsi_sell': 70}
+2026-03-08 16:05:26 | INFO     | engine.strategies.strategy_base | Initialized strategy VolatilityBreakout (logic_id=STRAT_3) with params: {'atr_window': 14, 'multiplier': 1.5}
+2026-03-08 16:05:26 | INFO     | engine.strategies.strategy_base | Initialized strategy RangePlay (logic_id=STRAT_4) with params: {'lookback': 10}
+2026-03-08 16:05:26 | INFO     | engine.engine | Active strategies: ['trend_following', 'mean_reversion', 'volatility_breakout', 'range_play']
+2026-03-08 16:05:26 | DEBUG    | engine.strategies.trend_following | TrendFollowing signals -- buys: 0, sells: 1
+2026-03-08 16:05:26 | DEBUG    | engine.strategies.mean_reversion | MeanReversion signals -- buys: 8, sells: 13
+2026-03-08 16:05:26 | DEBUG    | engine.strategies.volatility_breakout | VolatilityBreakout signals -- buys: 1, sells: 3
+2026-03-08 16:05:26 | DEBUG    | engine.strategies.range_play | RangePlay signals -- buys: 19, sells: 19
+2026-03-08 16:05:26 | INFO     | engine.engine | Executed 4 round-trip trades
+2026-03-08 16:05:27 | INFO     | engine.engine | Exported 4 trades -> outputs\orders.xlsx
+2026-03-08 16:05:27 | INFO     | engine.engine | ENGINE RUN COMPLETE -- 4 trades

@@ -1,0 +1,44 @@
+{
+  "data_file": "data/ohlc_clean.csv",
+  "timezone": "Asia/Kolkata",
+  "start_equity": 100000,
+  "regime_classifier": {
+    "lookback_vol": 20,
+    "atr_window": 14,
+    "trend_ma": 50
+  },
+  "strategies": {
+    "trend_following": {
+      "enabled": true,
+      "logic_id": "STRAT_1",
+      "params": {
+        "fast_ma": 20,
+        "slow_ma": 50
+      }
+    },
+    "mean_reversion": {
+      "enabled": true,
+      "logic_id": "STRAT_2",
+      "params": {
+        "rsi_window": 14,
+        "rsi_buy": 30,
+        "rsi_sell": 70
+      }
+    },
+    "volatility_breakout": {
+      "enabled": true,
+      "logic_id": "STRAT_3",
+      "params": {
+        "atr_window": 14,
+        "multiplier": 1.5
+      }
+    },
+    "range_play": {
+      "enabled": true,
+      "logic_id": "STRAT_4",
+      "params": {
+        "lookback": 10
+      }
+    }
+  }
+}

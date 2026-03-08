@@ -1,0 +1,12 @@
+Instrument : ^NSEI (NIFTY 50)
+Start Date : 2025-09-08 00:00:00
+End Date   : 2026-03-06 00:00:00
+Total Rows : 123
+Columns    : ['close', 'high', 'low', 'open', 'volume']
+
+Missing Values:
+close     0
+high      0
+low       0
+open      0
+volume    0
